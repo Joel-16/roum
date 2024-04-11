@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  server:
+    build: .
+    ports:
+      - "4000:3000"
+    depends_on:
+      - mongodb
+    environment:
+      - DATABASE_URL=mongodb://mongodb:27017/roum
+      - JWT_SECRET=xxgvfydhbkgaj
+    restart: always
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    restart: always
