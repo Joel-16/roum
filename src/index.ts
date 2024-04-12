@@ -15,36 +15,6 @@ import { databaseConnection } from "./utils/database";
 import { errorHandler } from "./middleware/errorHandler";
 import routes from "./routes";
 
-// import graphqlHTTP from 'express-graphql';
-// import { buildSchema } from 'graphql';
-// import { SigninDto, SignupDto } from "./types";
-
-// const schema = buildSchema(`
-//   type User {
-//     _id: ID!
-//     password: String!
-//     email: String!
-//     firstname: String!
-//     lastname: String!
-//   }
-
-//   type Mutation {
-//     signup(username: String!, email: String!, password: String!): User
-//     signin(email: String!, password: String!): User
-//   }
-// `);
-
-// // Define resolvers
-// const root = {
-
-//   signup: ({ email, password, firstname, lastname }: SignupDto) => {
-//     // Logic to handle signup
-//   },
-//   signin: ({ email, password }: SigninDto) => {
-//     // Logic to handle signin
-//   }
-// };
-
 export const app = express();
 app.use(cors());
 app.use(helmet());
